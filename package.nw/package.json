@@ -1,0 +1,8 @@
+{
+    "name": "nw-electron-adapter",
+    "main": "index.html",
+    "window": {
+        "width": 250,
+        "height": 100
+    }
+}

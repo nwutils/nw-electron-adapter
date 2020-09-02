@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+  </head>
+  <body>
+    <button onclick="nw.Window.get().showDevTools()">
+      Open Dev Tools
+    </button>
+    <script>
+      nw.Window.get().showDevTools();
+      var app = require('../index.js');
+      console.log(app);
+    </script>
+  </body>
+</html>
