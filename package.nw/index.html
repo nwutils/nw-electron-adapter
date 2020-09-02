@@ -10,7 +10,7 @@
     </button>
     <script>
       nw.Window.get().showDevTools();
-      var app = require('../index.js');
+      var app = require('../index.js')(window);
       console.log(app);
     </script>
   </body>

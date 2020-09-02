@@ -1,7 +1,7 @@
 const helpers = require('./src/helpers.js');
 const notPlanned = helpers.notPlanned;
 
-const app = {
+const api = {
   on: notPlanned,
   quit: notPlanned,
   exit: notPlanned,
@@ -73,5 +73,16 @@ const app = {
   userAgentFallback: notPlanned,
   allowRendererProcessReuse: notPlanned
 };
+
+const app = function (win) {
+  if (win) {
+    global.win = win;
+  }
+  return api;
+};
+
+for (let key in api) {
+  app[key] = api[key];
+}
 
 module.exports = app;
