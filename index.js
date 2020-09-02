@@ -12,6 +12,7 @@ const app = {
   hide: notPlanned,
   show: notPlanned,
   setAppLogsPath: notPlanned,
+  getAppPath: require('./src/getAppPath.js'),
   getPath: notPlanned,
   getFileIcon: notPlanned,
   setPath: notPlanned,
