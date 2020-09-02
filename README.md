@@ -52,10 +52,10 @@ const app = require('nw-electron-adapter');
 `getLocaleCountryCode`                 | Not Planned
 `addRecentDocument`                    | Not Planned
 `clearRecentDocuments`                 | Not Planned
-`setAsDefaultProtocolClient`           | Not Planned
-`removeAsDefaultProtocolClient`        | Not Planned
-`isDefaultProtocolClient`              | Not Planned
-`getApplicationNameForProtocol`        | Not Planned
+`setAsDefaultProtocolClient`           | [Started Externally](https://github.com/nwutils/node-default-application-protocol)
+`removeAsDefaultProtocolClient`        | [Started Externally](https://github.com/nwutils/node-default-application-protocol)
+`isDefaultProtocolClient`              | [Started Externally](https://github.com/nwutils/node-default-application-protocol)
+`getApplicationNameForProtocol`        | [Started Externally](https://github.com/nwutils/node-default-application-protocol)
 `setUserTasks`                         | Not Planned
 `getJumpListSettings`                  | Not Planned
 `setJumpList`                          | Not Planned
