@@ -108,39 +108,39 @@ const app = require('nw-electron-adapter');
 
 ## Events
 
-Event                                 | Status
-:--                                   | :--
-`will-finish-launching`               | Not Planned
-`ready`                               | Not Planned
-`window-all-closed`                   | Not Planned
-`before-quit`                         | Not Planned
-`will-quit`                           | Not Planned
-`quit`                                | Not Planned
-`open-file`                           | Not Planned
-`open-url`                            | Not Planned
-`activate`                            | Not Planned
-`continue-activity`                   | Not Planned
-`will-continue-activity`              | Not Planned
-`continue-activity-error`             | Not Planned
-`activity-was-continued`              | Not Planned
-`update-activity-state`               | Not Planned
-`new-window-for-tab`                  | Not Planned
-`browser-window-blur`                 | Not Planned
-`browser-window-focus`                | Not Planned
-`browser-window-created`              | Not Planned
-`web-contents-created`                | Not Planned
-`certificate-error`                   | Not Planned
-`select-client-certificate`           | Not Planned
-`login`                               | Not Planned
-`gpu-info-update`                     | Not Planned
-`gpu-process-crashed`                 | Not Planned
-`renderer-process-crashed' Deprecate` | Not Planned
-`accessibility-support-changed`       | Not Planned
-`session-created`                     | Not Planned
-`second-instance`                     | Not Planned
-`desktop-capturer-get-sources`        | Not Planned
-`remote-require`                      | Not Planned
-`remote-get-global`                   | Not Planned
-`remote-get-builtin`                  | Not Planned
-`remote-get-current-window`           | Not Planned
-`remote-get-current-web-contents`     | Not Planned
+Event                                  | Status
+:--                                    | :--
+`will-finish-launching`                | Not Planned
+`ready`                                | Not Planned
+`window-all-closed`                    | Not Planned
+`before-quit`                          | Not Planned
+`will-quit`                            | Not Planned
+`quit`                                 | Not Planned
+`open-file`                            | Not Planned
+`open-url`                             | Not Planned
+`activate`                             | Not Planned
+`continue-activity`                    | Not Planned
+`will-continue-activity`               | Not Planned
+`continue-activity-error`              | Not Planned
+`activity-was-continued`               | Not Planned
+`update-activity-state`                | Not Planned
+`new-window-for-tab`                   | Not Planned
+`browser-window-blur`                  | Not Planned
+`browser-window-focus`                 | Not Planned
+`browser-window-created`               | Not Planned
+`web-contents-created`                 | Not Planned
+`certificate-error`                    | Not Planned
+`select-client-certificate`            | Not Planned
+`login`                                | Not Planned
+`gpu-info-update`                      | Not Planned
+`gpu-process-crashed`                  | Not Planned
+`renderer-process-crashed`             | Not Planned
+`accessibility-support-changed`        | Not Planned
+`session-created`                      | Not Planned
+`second-instance`                      | Not Planned
+`desktop-capturer-get-sources`         | Not Planned
+`remote-require`                       | Not Planned
+`remote-get-global`                    | Not Planned
+`remote-get-builtin`                   | Not Planned
+`remote-get-current-window`            | Not Planned
+`remote-get-current-web-contents`      | Not Planned
