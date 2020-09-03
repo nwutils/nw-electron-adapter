@@ -1,3 +1,8 @@
+/**
+ * Uses the DOM's console log if available, otherwise falls back to the background process.
+ *
+ * @return {Function}  console.log function
+ */
 function logger () {
   return global.win && global.win.console && global.win.console.log || console.log;
 }

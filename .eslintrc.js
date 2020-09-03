@@ -15,10 +15,13 @@ module.exports = {
     nw: true
   },
   plugins: [
-    'jest'
+    'jest',
+    'jsdoc',
+    'markdown'
   ],
   extends: [
     'eslint:recommended',
+    'plugin:jsdoc/recommended',
     'plugin:jest/recommended',
     'tjw-base'
   ],
@@ -27,5 +30,13 @@ module.exports = {
       'error',
       'Property[method="true"]'
     ]
+  },
+  settings: {
+    jsdoc: {
+      tagNamePreference: {
+        property: 'prop',
+        returns: 'return'
+      }
+    }
   }
 };
