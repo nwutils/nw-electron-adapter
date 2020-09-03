@@ -42,7 +42,7 @@ const app = require('nw-electron-adapter')(window);
 `show`                                 | ☆☆☆☆ | Not Planned
 `setAppLogsPath`                       | ☆☆☆☆ | Not Planned
 `getAppPath`                           | 🟊🟊☆☆ | Working
-`getPath`                              | 🟊🟊☆☆ | Working
+`getPath`                              | 🟊🟊🟊☆ | Documented
 `getFileIcon`                          | ☆☆☆☆ | Not Planned
 `setPath`                              | ☆☆☆☆ | Not Planned
 `getVersion`                           | ☆☆☆☆ | Not Planned
