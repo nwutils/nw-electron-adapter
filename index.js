@@ -1,5 +1,6 @@
 const helpers = require('./src/helpers.js');
 const notPlanned = helpers.notPlanned;
+const notPlannedNodeDefaultApplicationProtocol = helpers.notPlannedNodeDefaultApplicationProtocol;
 
 const api = {
   on: notPlanned,
@@ -23,10 +24,10 @@ const api = {
   getLocaleCountryCode: notPlanned,
   addRecentDocument: notPlanned,
   clearRecentDocuments: notPlanned,
-  setAsDefaultProtocolClient: notPlanned,
-  removeAsDefaultProtocolClient: notPlanned,
-  isDefaultProtocolClient: notPlanned,
-  getApplicationNameForProtocol: notPlanned,
+  setAsDefaultProtocolClient: notPlannedNodeDefaultApplicationProtocol,
+  removeAsDefaultProtocolClient: notPlannedNodeDefaultApplicationProtocol,
+  isDefaultProtocolClient: notPlannedNodeDefaultApplicationProtocol,
+  getApplicationNameForProtocol: notPlannedNodeDefaultApplicationProtocol,
   setUserTasks: notPlanned,
   getJumpListSettings: notPlanned,
   setJumpList: notPlanned,
