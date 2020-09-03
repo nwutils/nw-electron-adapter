@@ -119,4 +119,3 @@ const getPath = function (name) {
 };
 
 module.exports = getPath;
-
