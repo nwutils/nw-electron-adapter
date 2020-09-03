@@ -14,7 +14,7 @@ const api = {
   show: notPlanned,
   setAppLogsPath: notPlanned,
   getAppPath: require('./src/getAppPath.js'),
-  getPath: notPlanned,
+  getPath: require('./src/getPath.js'),
   getFileIcon: notPlanned,
   setPath: notPlanned,
   getVersion: notPlanned,
