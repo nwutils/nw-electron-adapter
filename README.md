@@ -22,12 +22,12 @@ const app = require('nw-electron-adapter')(window);
 **Statuses:**
 
 * ☆☆☆☆ Not Planned
-* 🟊☆☆☆ Planned
-* 🟊🟉☆☆ Started
-* 🟊🟊☆☆ Working
-* 🟊🟊🟊☆ Documented
-* 🟊🟊🟊🟉 Tested
-* 🟊🟊🟊🟊 Released
+* ✯☆☆☆ Planned
+* ✯✫☆☆ Started
+* ✯✯☆☆ Working
+* ✯✯✯☆ Documented
+* ✯✯✯✫ Tested
+* ✯✯✯✯ Released
 
 
 **API**                                | Rating | **Status**
@@ -41,8 +41,8 @@ const app = require('nw-electron-adapter')(window);
 `hide`                                 | ☆☆☆☆ | Not Planned
 `show`                                 | ☆☆☆☆ | Not Planned
 `setAppLogsPath`                       | ☆☆☆☆ | Not Planned
-`getAppPath`                           | 🟊🟊☆☆ | Working
-`getPath`                              | 🟊🟊🟊☆ | [Documented](https://github.com/nwutils/nw-electron-adapter/blob/master/src/api/getPath.js)
+`getAppPath`                           | ✯✯☆☆ | Working
+`getPath`                              | ✯✯✯☆ | [Documented](https://github.com/nwutils/nw-electron-adapter/blob/master/src/api/getPath.js)
 `getFileIcon`                          | ☆☆☆☆ | Not Planned
 `setPath`                              | ☆☆☆☆ | Not Planned
 `getVersion`                           | ☆☆☆☆ | Not Planned
@@ -52,10 +52,10 @@ const app = require('nw-electron-adapter')(window);
 `getLocaleCountryCode`                 | ☆☆☆☆ | Not Planned
 `addRecentDocument`                    | ☆☆☆☆ | Not Planned
 `clearRecentDocuments`                 | ☆☆☆☆ | Not Planned
-`setAsDefaultProtocolClient`           | 🟊☆☆☆ | [Planned Externally](https://github.com/nwutils/node-default-application-protocol)
-`removeAsDefaultProtocolClient`        | 🟊☆☆☆ | [Planned Externally](https://github.com/nwutils/node-default-application-protocol)
-`isDefaultProtocolClient`              | 🟊☆☆☆ | [Planned Externally](https://github.com/nwutils/node-default-application-protocol)
-`getApplicationNameForProtocol`        | 🟊☆☆☆ | [Planned Externally](https://github.com/nwutils/node-default-application-protocol)
+`setAsDefaultProtocolClient`           | ✯☆☆☆ | [Planned Externally](https://github.com/nwutils/node-default-application-protocol)
+`removeAsDefaultProtocolClient`        | ✯☆☆☆ | [Planned Externally](https://github.com/nwutils/node-default-application-protocol)
+`isDefaultProtocolClient`              | ✯☆☆☆ | [Planned Externally](https://github.com/nwutils/node-default-application-protocol)
+`getApplicationNameForProtocol`        | ✯☆☆☆ | [Planned Externally](https://github.com/nwutils/node-default-application-protocol)
 `setUserTasks`                         | ☆☆☆☆ | Not Planned
 `getJumpListSettings`                  | ☆☆☆☆ | Not Planned
 `setJumpList`                          | ☆☆☆☆ | Not Planned
