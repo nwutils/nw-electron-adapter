@@ -6,7 +6,7 @@ const os = require('os');
   Electron Docs v10.1.1
   https://www.electronjs.org/docs/api/app#appgetpathname
 
-  `app.getPath(name)``
+  `app.getPath(name)`
     * `name` String - You can request the following paths by the name:
       * `home` User's home directory.
       * `appData` Per-user application data directory, which by default points to:
