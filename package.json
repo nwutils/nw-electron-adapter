@@ -6,7 +6,17 @@
   "scripts": {
     "start": "nw ./package.nw",
     "lint": "eslint --config=.eslintrc.js index.js src/**/*.js",
-    "fix": "eslint --fix --config=.eslintrc.js index.js src/**/*.js"
+    "fix": "eslint --fix --config=.eslintrc.js index.js src/**/*.js",
+    "unit": "npm test",
+    "test": "jest --coverage --runInBand",
+    "test-one": "cls & jest --coverage --runInBand -t \"test name\"",
+    "test-debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --no-cache --runInBand -t \"test name\"",
+    "validate": "npm run lint && npm test"
+  },
+  "ManifestComments": [
+    "Jest 25.1.0 is broken on Windows, Gitlab CI, ZSH, & IntelliJ Terminal. Pinning to 24.9.0 until Jest issue #9459 is resolved."
+  ],
+  "dependencies": {
   },
   "devDependencies": {
     "eslint": "^7.7.0",
@@ -14,6 +24,7 @@
     "eslint-plugin-jest": "^23.20.0",
     "eslint-plugin-jsdoc": "^30.3.1",
     "eslint-plugin-markdown": "^1.0.2",
+    "jest": "24.9.0",
     "nw": "sdk"
   },
   "repository": {
