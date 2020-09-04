@@ -1,3 +1,13 @@
+
+/*
+  Electron Docs v10.1.1
+  https://www.electronjs.org/docs/api/app#appgetapppath
+
+  `app.getAppPath()`
+
+  Returns String - The current application directory.
+*/
+
 /**
  * Returns the start path for the application.
  *
