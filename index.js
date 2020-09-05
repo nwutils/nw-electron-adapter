@@ -82,8 +82,9 @@ const app = function (win) {
   return api;
 };
 
-for (let key in api) {
-  app[key] = api[key];
-}
+// Thought this would be cool, but unfortunately Electron's fucking garbage api uses the key "name", which is a reserved key on all functions and cannot be reassigned.
+// for (let key in api) {
+//   app[key] = api[key];
+// }
 
 module.exports = app;

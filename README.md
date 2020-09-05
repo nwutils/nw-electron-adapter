@@ -7,10 +7,11 @@ An adapter for Electron's API inside NW.js
 
 ```js
 // Be able to replace
-const app = require('electron');
+const app = require('electron').app;
+
 // with
 const app = require('nw-electron-adapter')(window);
-// and have most of the API work the same.
+// and have most of the API work the same in NW.js.
 ```
 
 ## API Reference
