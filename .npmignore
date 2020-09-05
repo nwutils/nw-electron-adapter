@@ -1,0 +1,14 @@
+.git/
+.github/
+node_modules/
+package.nw/
+tests/
+.editorconfig
+.eslintrc.js
+.gitattributes
+.gitignore
+.npmignore
+CODE_OF_CONDUCT.md
+jest.config.js
+package-lock.json
+README.md
