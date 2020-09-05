@@ -46,15 +46,12 @@ const getPath = function (name) {
   // eslint-disable-next-line no-useless-catch
   try {
     if (global.nw && typeof(name) === 'string') {
-      let appData;
-      if (process.platform === 'win32') {
-        appData = process.env.APPDATA;
-      } else if (process.platform === 'linux') {
-        appData = process.env.XDG_CONFIG_HOME || path.join(os.homedir(), '.config');
-      } else if (process.platform === 'darwin') {
-        appData = path.join(os.homedir(), 'Library', 'Application Support');
-      }
-
+      let osAppDataMap = {
+        win32: process.env.APPDATA,
+        linux: process.env.XDG_CONFIG_HOME || path.join(os.homedir(), '.config'),
+        darwin: path.join(os.homedir(), 'Library', 'Application Support')
+      };
+      let appData = osAppDataMap[process.platform];
       let dataPath = global.nw.App.dataPath;
 
       // Not sure if the pepper flash stuff is right, It's pretty close though if it isn't. Happy to accept a PR to correct this.
