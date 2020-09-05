@@ -1,8 +1,8 @@
 global.beforeEach(() => {
   global.nw = {
     App: {
-      dataPath: 'C:\\Users\\DUMMY\\AppData\\Local\\DUMMY_MOCK\\User Data\\Default',
-      startPath: 'C:\\Users\\DUMMY\\Documents\\GitHub\\MOCK'
+      dataPath: 'C:/Users/DUMMY/AppData/Local/DUMMY_MOCK/User Data/Default',
+      startPath: 'C:/Users/DUMMY/Documents/GitHub/MOCK'
     }
   };
 });
