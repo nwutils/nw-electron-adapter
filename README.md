@@ -16,11 +16,17 @@ const app = require('nw-electron-adapter')(window);
 // and have most of the API work the same in NW.js.
 ```
 
-## API Reference
+
+## Usage
+
+1. `npm install --save nw-electron-adapter`
+1. Replace `const app = require('electron').app;` or `const {app} = require('electron');` with `const app = require('nw-electron-adapter')(window);`
+1. Reference the below API Parity Tracker and make issues/PR's for missing features you need.
+
+
+## API Parity Tracker
 
 * https://www.electronjs.org/docs/api/app
-
-## Parity Tracker
 
 **Statuses:**
 
@@ -44,8 +50,8 @@ const app = require('nw-electron-adapter')(window);
 [`hide`](src/api/hide.js)                                                                 | 🌕🌑🌑🌑 | Planned
 [`show`](src/api/show.js)                                                                 | 🌕🌑🌑🌑 | Planned
 [`setAppLogsPath`](src/api/setAppLogsPath.js)                                             | 🌑🌑🌑🌑 | Not Planned
-[`getAppPath`](src/api/getAppPath.js)                                                     | 🌕🌕🌕🌗 | Tested
-[`getPath`](src/api/getPath.js)                                                           | 🌕🌕🌕🌗 | Tested
+[`getAppPath`](src/api/getAppPath.js)                                                     | 🌕🌕🌕🌕 | Released v1.0.0
+[`getPath`](src/api/getPath.js)                                                           | 🌕🌕🌕🌕 | Released v1.0.0
 [`getFileIcon`](src/api/getFileIcon.js)                                                   | 🌑🌑🌑🌑 | Not Planned
 [`setPath`](src/api/setPath.js)                                                           | 🌑🌑🌑🌑 | Not Planned
 [`getVersion`](src/api/getVersion.js)                                                     | 🌑🌑🌑🌑 | Not Planned
