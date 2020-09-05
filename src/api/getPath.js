@@ -109,12 +109,6 @@ const getPath = function (name) {
     }
 
     let message = 'app.getPath() requires a string to be passed in.';
-    if (typeof(name) === 'string') {
-      message = 'app.getPath(\'' + name + '\') - Requested path name not found.';
-    }
-    if (pathMap) {
-      message = message + ' Try one of these: ' + Object.keys(pathMap).join(', ') + '.';
-    }
     throw message;
   } catch (err) {
     throw err;

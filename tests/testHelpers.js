@@ -1,5 +1,5 @@
 const testHelpers = {
-  title: 'NW-ELECTRON-ADAPTER:'
+  title: 'nw-electron-adapter'
 };
 
 module.exports = testHelpers;
