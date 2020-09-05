@@ -39,8 +39,9 @@ jobs:
 
     - run: npm test
 
-    # We don't want 4 comments about code coverage, just just run it once
-    - if: ${{ matrix.node-version == '8.3.0' }}
+    # Master doesn't have a PR for comments so skip that branch
+    # We don't want 4 comments about code coverage, just just run it once on 8.3.0
+    - if: github.ref != 'refs/heads/master' && ${{ matrix.node-version == '8.3.0' }}
       uses: romeovs/lcov-reporter-action@v0.2.16
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
