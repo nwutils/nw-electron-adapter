@@ -12,6 +12,8 @@ module.exports = {
   globals: {
     jsdom: true,
     Promise: true,
+    Set: true,
+    Map: true,
     nw: true
   },
   plugins: [

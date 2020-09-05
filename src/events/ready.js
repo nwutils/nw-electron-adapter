@@ -7,7 +7,7 @@
 /**
  * [Description]
  *
- * @return {type}  [Description]
+ * @return {undefined}  [Description]
  */
 const ready = function () {
 };
