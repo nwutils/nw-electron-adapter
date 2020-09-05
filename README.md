@@ -30,77 +30,77 @@ const app = require('nw-electron-adapter')(window);
 * 🌕🌕🌕🌗 Tested
 * 🌕🌕🌕🌕 Released
 
-**API**                                | **Rating** | **Status**  | **Documentation**
-:--                                    | :--        | :--         | :--
-`quit`                                 | 🌑🌑🌑🌑 | Not Planned | []()
-`exit`                                 | 🌑🌑🌑🌑 | Not Planned | []()
-`relaunch`                             | 🌑🌑🌑🌑 | Not Planned | []()
-`isReady`                              | 🌑🌑🌑🌑 | Not Planned | []()
-`whenReady`                            | 🌑🌑🌑🌑 | Not Planned | []()
-`focus`                                | 🌑🌑🌑🌑 | Not Planned | []()
-`hide`                                 | 🌕🌑🌑🌑 | Planned     | []()
-`show`                                 | 🌕🌑🌑🌑 | Planned     | []()
-`setAppLogsPath`                       | 🌑🌑🌑🌑 | Not Planned | []()
-`getAppPath`                           | 🌕🌕🌕🌗 | Tested      | [Documentation](src/api/getAppPath.js)
-`getPath`                              | 🌕🌕🌕🌑 | Documented  | [Documentation](src/api/getPath.js)
-`getFileIcon`                          | 🌑🌑🌑🌑 | Not Planned | []()
-`setPath`                              | 🌑🌑🌑🌑 | Not Planned | []()
-`getVersion`                           | 🌑🌑🌑🌑 | Not Planned | []()
-`getName`                              | 🌑🌑🌑🌑 | Not Planned | []()
-`setName`                              | 🌑🌑🌑🌑 | Not Planned | []()
-`getLocale`                            | 🌑🌑🌑🌑 | Not Planned | []()
-`getLocaleCountryCode`                 | 🌑🌑🌑🌑 | Not Planned | []()
-`addRecentDocument`                    | 🌑🌑🌑🌑 | Not Planned | []()
-`clearRecentDocuments`                 | 🌑🌑🌑🌑 | Not Planned | []()
-`setAsDefaultProtocolClient`           | 🌕🌑🌑🌑 | Planned     | [External Repo](https://github.com/nwutils/node-default-application-protocol)
-`removeAsDefaultProtocolClient`        | 🌕🌑🌑🌑 | Planned     | [External Repo](https://github.com/nwutils/node-default-application-protocol)
-`isDefaultProtocolClient`              | 🌕🌑🌑🌑 | Planned     | [External Repo](https://github.com/nwutils/node-default-application-protocol)
-`getApplicationNameForProtocol`        | 🌕🌑🌑🌑 | Planned     | [External Repo](https://github.com/nwutils/node-default-application-protocol)
-`setUserTasks`                         | 🌑🌑🌑🌑 | Not Planned | []()
-`getJumpListSettings`                  | 🌑🌑🌑🌑 | Not Planned | []()
-`setJumpList`                          | 🌑🌑🌑🌑 | Not Planned | []()
-`requestSingleInstanceLock`            | 🌑🌑🌑🌑 | Not Planned | []()
-`hasSingleInstanceLock`                | 🌑🌑🌑🌑 | Not Planned | []()
-`releaseSingleInstanceLock`            | 🌑🌑🌑🌑 | Not Planned | []()
-`setUserActivity`                      | 🌑🌑🌑🌑 | Not Planned | []()
-`getCurrentActivityType`               | 🌑🌑🌑🌑 | Not Planned | []()
-`invalidateCurrentActivity`            | 🌑🌑🌑🌑 | Not Planned | []()
-`resignCurrentActivity`                | 🌑🌑🌑🌑 | Not Planned | []()
-`updateCurrentActivity`                | 🌑🌑🌑🌑 | Not Planned | []()
-`setAppUserModelId`                    | 🌑🌑🌑🌑 | Not Planned | []()
-`setActivationPolicy`                  | 🌑🌑🌑🌑 | Not Planned | []()
-`importCertificate`                    | 🌑🌑🌑🌑 | Not Planned | []()
-`disableHardwareAcceleration`          | 🌑🌑🌑🌑 | Not Planned | []()
-`disableDomainBlockingFor3DAPIs`       | 🌑🌑🌑🌑 | Not Planned | []()
-`getAppMetrics`                        | 🌑🌑🌑🌑 | Not Planned | []()
-`getGPUFeatureStatus`                  | 🌑🌑🌑🌑 | Not Planned | []()
-`getGPUInfo`                           | 🌑🌑🌑🌑 | Not Planned | []()
-`setBadgeCount`                        | 🌑🌑🌑🌑 | Not Planned | []()
-`getBadgeCount`                        | 🌑🌑🌑🌑 | Not Planned | []()
-`isUnityRunning`                       | 🌑🌑🌑🌑 | Not Planned | []()
-`getLoginItemSettings`                 | 🌑🌑🌑🌑 | Not Planned | []()
-`setLoginItemSettings`                 | 🌑🌑🌑🌑 | Not Planned | []()
-`isAccessibilitySupportEnabled`        | 🌑🌑🌑🌑 | Not Planned | []()
-`setAccessibilitySupportEnabled`       | 🌑🌑🌑🌑 | Not Planned | []()
-`showAboutPanel`                       | 🌑🌑🌑🌑 | Not Planned | []()
-`setAboutPanelOptions`                 | 🌑🌑🌑🌑 | Not Planned | []()
-`isEmojiPanelSupported`                | 🌑🌑🌑🌑 | Not Planned | []()
-`showEmojiPanel`                       | 🌑🌑🌑🌑 | Not Planned | []()
-`startAccessingSecurityScopedResource` | 🌑🌑🌑🌑 | Not Planned | []()
-`enableSandbox`                        | 🌑🌑🌑🌑 | Not Planned | []()
-`isInApplicationsFolder`               | 🌑🌑🌑🌑 | Not Planned | []()
-`moveToApplicationsFolder`             | 🌑🌑🌑🌑 | Not Planned | []()
-`isSecureKeyboardEntryEnabled`         | 🌑🌑🌑🌑 | Not Planned | []()
-`setSecureKeyboardEntryEnabled`        | 🌑🌑🌑🌑 | Not Planned | []()
-`accessibilitySupportEnabled`          | 🌑🌑🌑🌑 | Not Planned | []()
-`applicationMenu`                      | 🌑🌑🌑🌑 | Not Planned | []()
-`badgeCount`                           | 🌑🌑🌑🌑 | Not Planned | []()
-`commandLine`                          | 🌑🌑🌑🌑 | Not Planned | []()
-`dock`                                 | 🌑🌑🌑🌑 | Not Planned | []()
-`isPackaged`                           | 🌑🌑🌑🌑 | Not Planned | []()
-`name`                                 | 🌑🌑🌑🌑 | Not Planned | []()
-`userAgentFallback`                    | 🌑🌑🌑🌑 | Not Planned | []()
-`allowRendererProcessReuse`            | 🌑🌑🌑🌑 | Not Planned | []()
+**API**                                                                                   | **Rating** | **Status**
+:--                                                                                       | :--        | :--
+[`quit`](src/api/quit.js)                                                                 | 🌑🌑🌑🌑 | Not Planned
+[`exit`](src/api/exit.js)                                                                 | 🌑🌑🌑🌑 | Not Planned
+[`relaunch`](src/api/relaunch.js)                                                         | 🌑🌑🌑🌑 | Not Planned
+[`isReady`](src/api/isReady.js)                                                           | 🌑🌑🌑🌑 | Not Planned
+[`whenReady`](src/api/whenReady.js)                                                       | 🌑🌑🌑🌑 | Not Planned
+[`focus`](src/api/focus.js)                                                               | 🌑🌑🌑🌑 | Not Planned
+[`hide`](src/api/hide.js)                                                                 | 🌕🌑🌑🌑 | Planned
+[`show`](src/api/show.js)                                                                 | 🌕🌑🌑🌑 | Planned
+[`setAppLogsPath`](src/api/setAppLogsPath.js)                                             | 🌑🌑🌑🌑 | Not Planned
+[`getAppPath`](src/api/getAppPath.js)                                                     | 🌕🌕🌕🌗 | Tested
+[`getPath`](src/api/getPath.js)                                                           | 🌕🌕🌕🌑 | Documented
+[`getFileIcon`](src/api/getFileIcon.js)                                                   | 🌑🌑🌑🌑 | Not Planned
+[`setPath`](src/api/setPath.js)                                                           | 🌑🌑🌑🌑 | Not Planned
+[`getVersion`](src/api/getVersion.js)                                                     | 🌑🌑🌑🌑 | Not Planned
+[`getName`](src/api/getName.js)                                                           | 🌑🌑🌑🌑 | Not Planned
+[`setName`](src/api/setName.js)                                                           | 🌑🌑🌑🌑 | Not Planned
+[`getLocale`](src/api/getLocale.js)                                                       | 🌑🌑🌑🌑 | Not Planned
+[`getLocaleCountryCode`](src/api/getLocaleCountryCode.js)                                 | 🌑🌑🌑🌑 | Not Planned
+[`addRecentDocument`](src/api/addRecentDocument.js)                                       | 🌑🌑🌑🌑 | Not Planned
+[`clearRecentDocuments`](src/api/clearRecentDocuments.js)                                 | 🌑🌑🌑🌑 | Not Planned
+`setAsDefaultProtocolClient`                                                              | 🌕🌑🌑🌑 | [Planned externaly](https://github.com/nwutils/node-default-application-protocol)
+`removeAsDefaultProtocolClient`                                                           | 🌕🌑🌑🌑 | [Planned externaly](https://github.com/nwutils/node-default-application-protocol)
+`isDefaultProtocolClient`                                                                 | 🌕🌑🌑🌑 | [Planned externaly](https://github.com/nwutils/node-default-application-protocol)
+`getApplicationNameForProtocol`                                                           | 🌕🌑🌑🌑 | [Planned externaly](https://github.com/nwutils/node-default-application-protocol)
+[`setUserTasks`](src/api/setUserTasks.js)                                                 | 🌑🌑🌑🌑 | Not Planned
+[`getJumpListSettings`](src/api/getJumpListSettings.js)                                   | 🌑🌑🌑🌑 | Not Planned
+[`setJumpList`](src/api/setJumpList.js)                                                   | 🌑🌑🌑🌑 | Not Planned
+[`requestSingleInstanceLock`](src/api/requestSingleInstanceLock.js)                       | 🌑🌑🌑🌑 | Not Planned
+[`hasSingleInstanceLock`](src/api/hasSingleInstanceLock.js)                               | 🌑🌑🌑🌑 | Not Planned
+[`releaseSingleInstanceLock`](src/api/releaseSingleInstanceLock.js)                       | 🌑🌑🌑🌑 | Not Planned
+[`setUserActivity`](src/api/setUserActivity.js)                                           | 🌑🌑🌑🌑 | Not Planned
+[`getCurrentActivityType`](src/api/getCurrentActivityType.js)                             | 🌑🌑🌑🌑 | Not Planned
+[`invalidateCurrentActivity`](src/api/invalidateCurrentActivity.js)                       | 🌑🌑🌑🌑 | Not Planned
+[`resignCurrentActivity`](src/api/resignCurrentActivity.js)                               | 🌑🌑🌑🌑 | Not Planned
+[`updateCurrentActivity`](src/api/updateCurrentActivity.js)                               | 🌑🌑🌑🌑 | Not Planned
+[`setAppUserModelId`](src/api/setAppUserModelId.js)                                       | 🌑🌑🌑🌑 | Not Planned
+[`setActivationPolicy`](src/api/setActivationPolicy.js)                                   | 🌑🌑🌑🌑 | Not Planned
+[`importCertificate`](src/api/importCertificate.js)                                       | 🌑🌑🌑🌑 | Not Planned
+[`disableHardwareAcceleration`](src/api/disableHardwareAcceleration.js)                   | 🌑🌑🌑🌑 | Not Planned
+[`disableDomainBlockingFor3DAPIs`](src/api/disableDomainBlockingFor3DAPIs.js)             | 🌑🌑🌑🌑 | Not Planned
+[`getAppMetrics`](src/api/getAppMetrics.js)                                               | 🌑🌑🌑🌑 | Not Planned
+[`getGPUFeatureStatus`](src/api/getGPUFeatureStatus.js)                                   | 🌑🌑🌑🌑 | Not Planned
+[`getGPUInfo`](src/api/getGPUInfo.js)                                                     | 🌑🌑🌑🌑 | Not Planned
+[`setBadgeCount`](src/api/setBadgeCount.js)                                               | 🌑🌑🌑🌑 | Not Planned
+[`getBadgeCount`](src/api/getBadgeCount.js)                                               | 🌑🌑🌑🌑 | Not Planned
+[`isUnityRunning`](src/api/isUnityRunning.js)                                             | 🌑🌑🌑🌑 | Not Planned
+[`getLoginItemSettings`](src/api/getLoginItemSettings.js)                                 | 🌑🌑🌑🌑 | Not Planned
+[`setLoginItemSettings`](src/api/setLoginItemSettings.js)                                 | 🌑🌑🌑🌑 | Not Planned
+[`isAccessibilitySupportEnabled`](src/api/isAccessibilitySupportEnabled.js)               | 🌑🌑🌑🌑 | Not Planned
+[`setAccessibilitySupportEnabled`](src/api/setAccessibilitySupportEnabled.js)             | 🌑🌑🌑🌑 | Not Planned
+[`showAboutPanel`](src/api/showAboutPanel.js)                                             | 🌑🌑🌑🌑 | Not Planned
+[`setAboutPanelOptions`](src/api/setAboutPanelOptions.js)                                 | 🌑🌑🌑🌑 | Not Planned
+[`isEmojiPanelSupported`](src/api/isEmojiPanelSupported.js)                               | 🌑🌑🌑🌑 | Not Planned
+[`showEmojiPanel`](src/api/showEmojiPanel.js)                                             | 🌑🌑🌑🌑 | Not Planned
+[`startAccessingSecurityScopedResource`](src/api/startAccessingSecurityScopedResource.js) | 🌑🌑🌑🌑 | Not Planned
+[`enableSandbox`](src/api/enableSandbox.js)                                               | 🌑🌑🌑🌑 | Not Planned
+[`isInApplicationsFolder`](src/api/isInApplicationsFolder.js)                             | 🌑🌑🌑🌑 | Not Planned
+[`moveToApplicationsFolder`](src/api/moveToApplicationsFolder.js)                         | 🌑🌑🌑🌑 | Not Planned
+[`isSecureKeyboardEntryEnabled`](src/api/isSecureKeyboardEntryEnabled.js)                 | 🌑🌑🌑🌑 | Not Planned
+[`setSecureKeyboardEntryEnabled`](src/api/setSecureKeyboardEntryEnabled.js)               | 🌑🌑🌑🌑 | Not Planned
+[`accessibilitySupportEnabled`](src/api/accessibilitySupportEnabled.js)                   | 🌑🌑🌑🌑 | Not Planned
+[`applicationMenu`](src/api/applicationMenu.js)                                           | 🌑🌑🌑🌑 | Not Planned
+[`badgeCount`](src/api/badgeCount.js)                                                     | 🌑🌑🌑🌑 | Not Planned
+[`commandLine`](src/api/commandLine.js)                                                   | 🌑🌑🌑🌑 | Not Planned
+[`dock`](src/api/dock.js)                                                                 | 🌑🌑🌑🌑 | Not Planned
+[`isPackaged`](src/api/isPackaged.js)                                                     | 🌑🌑🌑🌑 | Not Planned
+[`name`](src/api/name.js)                                                                 | 🌑🌑🌑🌑 | Not Planned
+[`userAgentFallback`](src/api/userAgentFallback.js)                                       | 🌑🌑🌑🌑 | Not Planned
+[`allowRendererProcessReuse`](src/api/allowRendererProcessReuse.js)                       | 🌑🌑🌑🌑 | Not Planned
 
 
 
@@ -108,39 +108,39 @@ const app = require('nw-electron-adapter')(window);
 
 ## Events
 
-**Event**                              | **Rating** | **Status**  | **Documentation**
-:--                                    | :--        | :--         | :--
-`will-finish-launching`                | 🌑🌑🌑🌑 | Not Planned | []()
-`ready`                                | 🌑🌑🌑🌑 | Not Planned | []()
-`window-all-closed`                    | 🌑🌑🌑🌑 | Not Planned | []()
-`before-quit`                          | 🌑🌑🌑🌑 | Not Planned | []()
-`will-quit`                            | 🌑🌑🌑🌑 | Not Planned | []()
-`quit`                                 | 🌑🌑🌑🌑 | Not Planned | []()
-`open-file`                            | 🌑🌑🌑🌑 | Not Planned | []()
-`open-url`                             | 🌑🌑🌑🌑 | Not Planned | []()
-`activate`                             | 🌑🌑🌑🌑 | Not Planned | []()
-`continue-activity`                    | 🌑🌑🌑🌑 | Not Planned | []()
-`will-continue-activity`               | 🌑🌑🌑🌑 | Not Planned | []()
-`continue-activity-error`              | 🌑🌑🌑🌑 | Not Planned | []()
-`activity-was-continued`               | 🌑🌑🌑🌑 | Not Planned | []()
-`update-activity-state`                | 🌑🌑🌑🌑 | Not Planned | []()
-`new-window-for-tab`                   | 🌑🌑🌑🌑 | Not Planned | []()
-`browser-window-blur`                  | 🌑🌑🌑🌑 | Not Planned | []()
-`browser-window-focus`                 | 🌑🌑🌑🌑 | Not Planned | []()
-`browser-window-created`               | 🌑🌑🌑🌑 | Not Planned | []()
-`web-contents-created`                 | 🌑🌑🌑🌑 | Not Planned | []()
-`certificate-error`                    | 🌑🌑🌑🌑 | Not Planned | []()
-`select-client-certificate`            | 🌑🌑🌑🌑 | Not Planned | []()
-`login`                                | 🌑🌑🌑🌑 | Not Planned | []()
-`gpu-info-update`                      | 🌑🌑🌑🌑 | Not Planned | []()
-`gpu-process-crashed`                  | 🌑🌑🌑🌑 | Not Planned | []()
-`renderer-process-crashed`             | 🌑🌑🌑🌑 | Not Planned | []()
-`accessibility-support-changed`        | 🌑🌑🌑🌑 | Not Planned | []()
-`session-created`                      | 🌑🌑🌑🌑 | Not Planned | []()
-`second-instance`                      | 🌑🌑🌑🌑 | Not Planned | []()
-`desktop-capturer-get-sources`         | 🌑🌑🌑🌑 | Not Planned | []()
-`remote-require`                       | 🌑🌑🌑🌑 | Not Planned | []()
-`remote-get-global`                    | 🌑🌑🌑🌑 | Not Planned | []()
-`remote-get-builtin`                   | 🌑🌑🌑🌑 | Not Planned | []()
-`remote-get-current-window`            | 🌑🌑🌑🌑 | Not Planned | []()
-`remote-get-current-web-contents`      | 🌑🌑🌑🌑 | Not Planned | []()
+**Event**                                                                      | **Rating** | **Status**
+:--                                                                            | :--        | :--
+[`will-finish-launching`](src/events/willFINISHLaunching.js)                   | 🌑🌑🌑🌑 | Not Planned
+[`ready`](src/events/ready.js)                                                 | 🌑🌑🌑🌑 | Not Planned
+[`window-all-closed`](src/events/windowAllClosed.js)                           | 🌑🌑🌑🌑 | Not Planned
+[`before-quit`](src/events/beforeQuit.js)                                      | 🌑🌑🌑🌑 | Not Planned
+[`will-quit`](src/events/willQuit.js)                                          | 🌑🌑🌑🌑 | Not Planned
+[`quit`](src/events/quit.js)                                                   | 🌑🌑🌑🌑 | Not Planned
+[`open-file`](src/events/openFile.js)                                          | 🌑🌑🌑🌑 | Not Planned
+[`open-url`](src/events/openUrl.js)                                            | 🌑🌑🌑🌑 | Not Planned
+[`activate`](src/events/activate.js)                                           | 🌑🌑🌑🌑 | Not Planned
+[`continue-activity`](src/events/continueActivity.js)                          | 🌑🌑🌑🌑 | Not Planned
+[`will-continue-activity`](src/events/willContinueActivity.js)                 | 🌑🌑🌑🌑 | Not Planned
+[`continue-activity-error`](src/events/continueActivityError.js)               | 🌑🌑🌑🌑 | Not Planned
+[`activity-was-continued`](src/events/activityWasContinued.js)                 | 🌑🌑🌑🌑 | Not Planned
+[`update-activity-state`](src/events/updateActivityState.js)                   | 🌑🌑🌑🌑 | Not Planned
+[`new-window-for-tab`](src/events/newWindowForTab.js)                          | 🌑🌑🌑🌑 | Not Planned
+[`browser-window-blur`](src/events/browserWindowBlur.js)                       | 🌑🌑🌑🌑 | Not Planned
+[`browser-window-focus`](src/events/browserWindowFocus.js)                     | 🌑🌑🌑🌑 | Not Planned
+[`browser-window-created`](src/events/browserWindowCreated.js)                 | 🌑🌑🌑🌑 | Not Planned
+[`web-contents-created`](src/events/webContentsCreated.js)                     | 🌑🌑🌑🌑 | Not Planned
+[`certificate-error`](src/events/certificateError.js)                          | 🌑🌑🌑🌑 | Not Planned
+[`select-client-certificate`](src/events/selectClientCertificate.js)           | 🌑🌑🌑🌑 | Not Planned
+[`login`](src/events/login.js)                                                 | 🌑🌑🌑🌑 | Not Planned
+[`gpu-info-update`](src/events/gpuInfoUpdate.js)                               | 🌑🌑🌑🌑 | Not Planned
+[`gpu-process-crashed`](src/events/gpuProcessCrashed.js)                       | 🌑🌑🌑🌑 | Not Planned
+[`renderer-process-crashed`](src/events/rendererProcessCrashed.js)             | 🌑🌑🌑🌑 | Not Planned
+[`accessibility-support-changed`](src/events/accessibilitySupportChanged.js)   | 🌑🌑🌑🌑 | Not Planned
+[`session-created`](src/events/sessionCreated.js)                              | 🌑🌑🌑🌑 | Not Planned
+[`second-instance`](src/events/secondInstance.js)                              | 🌑🌑🌑🌑 | Not Planned
+[`desktop-capturer-get-sources`](src/events/desktopCapturerGetSources.js)      | 🌑🌑🌑🌑 | Not Planned
+[`remote-require`](src/events/remoteRequire.js)                                | 🌑🌑🌑🌑 | Not Planned
+[`remote-get-global`](src/events/remoteGetGlobal.js)                           | 🌑🌑🌑🌑 | Not Planned
+[`remote-get-builtin`](src/events/remoteGetBuiltin.js)                         | 🌑🌑🌑🌑 | Not Planned
+[`remote-get-current-window`](src/events/remoteGetCurrentWindow.js)            | 🌑🌑🌑🌑 | Not Planned
+[`remote-get-current-web-contents`](src/events/remoteGetCurrentWebContents.js) | 🌑🌑🌑🌑 | Not Planned
