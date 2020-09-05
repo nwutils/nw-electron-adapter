@@ -46,12 +46,12 @@ const getPath = function (name) {
   // eslint-disable-next-line no-useless-catch
   try {
     if (global.nw && typeof(name) === 'string') {
-      let osAppData = {
+      let osAppDataMap = {
         win32: process.env.APPDATA,
         linux: process.env.XDG_CONFIG_HOME || path.join(os.homedir(), '.config'),
         darwin: path.join(os.homedir(), 'Library', 'Application Support')
       };
-      let appData = osAppData[process.platform];
+      let appData = osAppDataMap[process.platform];
       let dataPath = global.nw.App.dataPath;
 
       // Not sure if the pepper flash stuff is right, It's pretty close though if it isn't. Happy to accept a PR to correct this.
@@ -106,12 +106,6 @@ const getPath = function (name) {
     }
 
     let message = 'app.getPath() requires a string to be passed in.';
-    if (typeof(name) === 'string') {
-      message = 'app.getPath(\'' + name + '\') - Requested path name not found.';
-    }
-    if (pathMap) {
-      message = message + ' Try one of these: ' + Object.keys(pathMap).join(', ') + '.';
-    }
     throw message;
   } catch (err) {
     throw err;

@@ -6,12 +6,14 @@
 function logger () {
   return global.win && global.win.console && global.win.console.log || console.log;
 }
+const title = 'nw-electron-adapter';
+const underscore = (new Array(title.length)).fill('_').join('');
 
 const helpers = {
   notPlanned: function () {
     const log = logger();
-    log('___________________');
-    log('nw-electron-adapter');
+    log(underscore);
+    log(title);
     log('This API mapping has not been planned yet.');
     log('Search for this API item in the issues and +1 it.');
     log('* https://github.com/nwutils/nw-electron-adapter/issues');
@@ -19,8 +21,8 @@ const helpers = {
   },
   notPlannedNodeDefaultApplicationProtocol: function () {
     const log = logger();
-    log('___________________');
-    log('nw-electron-adapter');
+    log(underscore);
+    log(title);
     log('This API mapping is handled by an external repo, but this part of it needs your help:');
     log('* https://github.com/nwutils/node-default-application-protocol/issues');
   }

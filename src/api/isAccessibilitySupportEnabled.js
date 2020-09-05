@@ -9,7 +9,7 @@
 /**
  * [Description]
  *
- * @return {type}  [Description]
+ * @return {undefined}  [Description]
  */
 const isAccessibilitySupportEnabled = function () {
 };

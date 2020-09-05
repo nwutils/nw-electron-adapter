@@ -1,4 +1,5 @@
 const helpers = require('@/src/helpers.js');
+const testHelpers = require('@/tests/testHelpers.js');
 
 describe('helpers', () => {
   let consoleLog;
@@ -26,7 +27,7 @@ describe('helpers', () => {
         .toHaveBeenCalledWith('___________________');
 
       expect(global.win.console.log)
-        .toHaveBeenCalledWith('nw-electron-adapter');
+        .toHaveBeenCalledWith(testHelpers.title);
 
       expect(global.win.console.log)
         .toHaveBeenCalledWith('This API mapping has not been planned yet.');
@@ -49,7 +50,7 @@ describe('helpers', () => {
         .toHaveBeenCalledWith('___________________');
 
       expect(console.log)
-        .toHaveBeenCalledWith('nw-electron-adapter');
+        .toHaveBeenCalledWith(testHelpers.title);
 
       expect(console.log)
         .toHaveBeenCalledWith('This API mapping has not been planned yet.');
@@ -73,7 +74,7 @@ describe('helpers', () => {
         .toHaveBeenCalledWith('___________________');
 
       expect(global.win.console.log)
-        .toHaveBeenCalledWith('nw-electron-adapter');
+        .toHaveBeenCalledWith(testHelpers.title);
 
       expect(global.win.console.log)
         .toHaveBeenCalledWith('This API mapping is handled by an external repo, but this part of it needs your help:');

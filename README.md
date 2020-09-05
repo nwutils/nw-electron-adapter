@@ -1,5 +1,7 @@
 # nw-electron-adapter
 
+![Node.js CI](https://github.com/nwutils/nw-electron-adapter/workflows/Node.js%20CI/badge.svg?branch=master) [![Test Coverage: 100%](https://img.shields.io/badge/Test%20Coverage-100%25-brightgreen.svg?logo=jest)](https://coveralls.io/github/tjw-lint/jest-serializer-vue-tjw) [![Lint Coverage: 100%](https://img.shields.io/badge/Lint%20Coverage-100%25-brightgreen.svg?logo=eslint)](https://github.com/tjw-lint) [![Compatible with Node 8.3+](https://img.shields.io/badge/Node-%3E%3D8.3.0-brightgreen.svg?logo=Node.js)](/package.json) [![Code of Conduct: No Ideologies](https://img.shields.io/badge/CoC-No%20Ideologies-blue)](/CODE_OF_CONDUCT.md) [![MIT Licensed](https://img.shields.io/badge/License-MIT-brightgreen)](/LICENSE)
+
 An adapter for Electron's API inside NW.js
 
 
@@ -43,7 +45,7 @@ const app = require('nw-electron-adapter')(window);
 [`show`](src/api/show.js)                                                                 | 🌕🌑🌑🌑 | Planned
 [`setAppLogsPath`](src/api/setAppLogsPath.js)                                             | 🌑🌑🌑🌑 | Not Planned
 [`getAppPath`](src/api/getAppPath.js)                                                     | 🌕🌕🌕🌗 | Tested
-[`getPath`](src/api/getPath.js)                                                           | 🌕🌕🌕🌑 | Documented
+[`getPath`](src/api/getPath.js)                                                           | 🌕🌕🌕🌗 | Tested
 [`getFileIcon`](src/api/getFileIcon.js)                                                   | 🌑🌑🌑🌑 | Not Planned
 [`setPath`](src/api/setPath.js)                                                           | 🌑🌑🌑🌑 | Not Planned
 [`getVersion`](src/api/getVersion.js)                                                     | 🌑🌑🌑🌑 | Not Planned
