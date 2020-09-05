@@ -1,9 +1,18 @@
 jest.mock('fs');
 jest.mock('os');
 const getPath = require('@/src/api/getPath.js');
+const slasher = require('@/tests/testHelpers.js').slasher;
 
 describe('getPath', () => {
   const realProcess = process;
+  const slashifyValues = function (obj) {
+    for (let key in obj) {
+      if (typeof(obj[key]) === 'string') {
+        obj[key] = slasher(obj[key]);
+      }
+    }
+    return obj;
+  };
 
   beforeEach(() => {
     global.process = Object.assign(
@@ -12,10 +21,10 @@ describe('getPath', () => {
       {
         platform: 'win32',
         env: {
-          APPDATA: 'C:\\Users\\DUMMY\\AppData\\Roaming',
+          APPDATA: 'C:/Users/DUMMY/AppData/Roaming',
           XDG_CONFIG_HOME: '/DUMMY_XDG_CONFIG_HOME'
         },
-        execPath: 'C:\\Users\\DUMMY\\Documents\\GitHub\\MOCK\\node_modules\\nw\\nwjs\\nw.exe'
+        execPath: 'C:/Users/DUMMY/Documents/GitHub/MOCK/node_modules/nw/nwjs/nw.exe'
       }
     );
   });
@@ -70,81 +79,81 @@ describe('getPath', () => {
     global.process.platform = 'linux';
     delete global.process.env.XDG_CONFIG_HOME;
 
-    expect(getPath('appData'))
-      .toEqual('C:\\Users\\MOCK_HOME_DIR\\.config');
+    expect(slasher(getPath('appData')))
+      .toEqual('C:/Users/MOCK_HOME_DIR/.config');
   });
 
   test('All - Windows', () => {
     global.process.platform = 'win32';
     delete global.process.env.XDG_CONFIG_HOME;
 
-    expect(getPath('all'))
+    expect(slashifyValues(getPath('all')))
       .toEqual({
-        appData: 'C:\\Users\\DUMMY\\AppData\\Roaming',
-        cache: 'C:\\Users\\DUMMY\\AppData\\Local\\DUMMY_MOCK\\cache',
-        crashDumps: 'C:\\Users\\DUMMY\\AppData\\Local\\DUMMY_MOCK\\User Data\\Crashpad',
-        desktop: 'C:\\Users\\MOCK_HOME_DIR\\Desktop',
-        documents: 'C:\\Users\\MOCK_HOME_DIR\\Documents',
-        downloads: 'C:\\Users\\MOCK_HOME_DIR\\Downloads',
-        exe: 'C:\\Users\\DUMMY\\Documents\\GitHub\\MOCK\\node_modules\\nw\\nwjs\\nw.exe',
-        home: 'C:\\Users\\MOCK_HOME_DIR',
-        logs: 'C:\\Users\\DUMMY\\AppData\\Local\\DUMMY_MOCK\\logs',
-        module: 'C:\\Users\\DUMMY\\AppData\\Local\\DUMMY_MOCK\\User Data\\Default',
-        music: 'C:\\Users\\MOCK_HOME_DIR\\Music',
-        pepperFlashSystemPlugin: 'C:\\Users\\DUMMY\\Documents\\GitHub\\MOCK\\node_modules\\nw\\nwjs\\PepperFlash',
-        pictures: 'C:\\Users\\MOCK_HOME_DIR\\Pictures',
-        recent: 'C:\\Users\\DUMMY\\AppData\\Roaming\\Microsoft\\Windows\\Recent',
-        temp: 'C:\\Users\\DUMMY\\AppData\\Local\\Temp',
-        userData: 'C:\\Users\\DUMMY\\AppData\\Local\\DUMMY_MOCK\\User Data\\Default',
-        videos: 'C:\\Users\\MOCK_HOME_DIR\\Videos'
+        appData: 'C:/Users/DUMMY/AppData/Roaming',
+        cache: 'C:/Users/DUMMY/AppData/Local/DUMMY_MOCK/cache',
+        crashDumps: 'C:/Users/DUMMY/AppData/Local/DUMMY_MOCK/User Data/Crashpad',
+        desktop: 'C:/Users/MOCK_HOME_DIR/Desktop',
+        documents: 'C:/Users/MOCK_HOME_DIR/Documents',
+        downloads: 'C:/Users/MOCK_HOME_DIR/Downloads',
+        exe: 'C:/Users/DUMMY/Documents/GitHub/MOCK/node_modules/nw/nwjs/nw.exe',
+        home: 'C:/Users/MOCK_HOME_DIR',
+        logs: 'C:/Users/DUMMY/AppData/Local/DUMMY_MOCK/logs',
+        module: 'C:/Users/DUMMY/AppData/Local/DUMMY_MOCK/User Data/Default',
+        music: 'C:/Users/MOCK_HOME_DIR/Music',
+        pepperFlashSystemPlugin: 'C:/Users/DUMMY/Documents/GitHub/MOCK/node_modules/nw/nwjs/PepperFlash',
+        pictures: 'C:/Users/MOCK_HOME_DIR/Pictures',
+        recent: 'C:/Users/DUMMY/AppData/Roaming/Microsoft/Windows/Recent',
+        temp: 'C:/Users/DUMMY/AppData/Local/Temp',
+        userData: 'C:/Users/DUMMY/AppData/Local/DUMMY_MOCK/User Data/Default',
+        videos: 'C:/Users/MOCK_HOME_DIR/Videos'
       });
   });
 
   test('All - Linux', () => {
     global.process.platform = 'linux';
 
-    expect(getPath('all'))
+    expect(slashifyValues(getPath('all')))
       .toEqual({
         appData: '/DUMMY_XDG_CONFIG_HOME',
-        cache: 'C:\\Users\\DUMMY\\AppData\\Local\\DUMMY_MOCK\\cache',
-        crashDumps: 'C:\\Users\\DUMMY\\AppData\\Local\\DUMMY_MOCK\\User Data\\Crashpad',
-        desktop: 'C:\\Users\\MOCK_HOME_DIR\\Desktop',
-        documents: 'C:\\Users\\MOCK_HOME_DIR\\Documents',
-        downloads: 'C:\\Users\\MOCK_HOME_DIR\\Downloads',
-        exe: 'C:\\Users\\DUMMY\\Documents\\GitHub\\MOCK\\node_modules\\nw\\nwjs\\nw.exe',
+        cache: 'C:/Users/DUMMY/AppData/Local/DUMMY_MOCK/cache',
+        crashDumps: 'C:/Users/DUMMY/AppData/Local/DUMMY_MOCK/User Data/Crashpad',
+        desktop: 'C:/Users/MOCK_HOME_DIR/Desktop',
+        documents: 'C:/Users/MOCK_HOME_DIR/Documents',
+        downloads: 'C:/Users/MOCK_HOME_DIR/Downloads',
+        exe: 'C:/Users/DUMMY/Documents/GitHub/MOCK/node_modules/nw/nwjs/nw.exe',
         home: '/DUMMY_XDG_CONFIG_HOME',
-        logs: 'C:\\Users\\DUMMY\\AppData\\Local\\DUMMY_MOCK\\logs',
-        module: 'C:\\Users\\DUMMY\\AppData\\Local\\DUMMY_MOCK\\User Data\\Default',
-        music: 'C:\\Users\\MOCK_HOME_DIR\\Music',
-        pepperFlashSystemPlugin: 'C:\\Users\\DUMMY\\Documents\\GitHub\\MOCK\\node_modules\\nw\\nwjs\\PepperFlash',
-        pictures: 'C:\\Users\\MOCK_HOME_DIR\\Pictures',
-        temp: 'C:\\Users\\DUMMY\\AppData\\Local\\Temp',
-        userData: 'C:\\Users\\DUMMY\\AppData\\Local\\DUMMY_MOCK\\User Data\\Default',
-        videos: 'C:\\Users\\MOCK_HOME_DIR\\Videos'
+        logs: 'C:/Users/DUMMY/AppData/Local/DUMMY_MOCK/logs',
+        module: 'C:/Users/DUMMY/AppData/Local/DUMMY_MOCK/User Data/Default',
+        music: 'C:/Users/MOCK_HOME_DIR/Music',
+        pepperFlashSystemPlugin: 'C:/Users/DUMMY/Documents/GitHub/MOCK/node_modules/nw/nwjs/PepperFlash',
+        pictures: 'C:/Users/MOCK_HOME_DIR/Pictures',
+        temp: 'C:/Users/DUMMY/AppData/Local/Temp',
+        userData: 'C:/Users/DUMMY/AppData/Local/DUMMY_MOCK/User Data/Default',
+        videos: 'C:/Users/MOCK_HOME_DIR/Videos'
       });
   });
 
   test('All - Darwin', () => {
     global.process.platform = 'darwin';
 
-    expect(getPath('all'))
+    expect(slashifyValues(getPath('all')))
       .toEqual({
-        appData: 'C:\\Users\\MOCK_HOME_DIR\\Library\\Application Support',
-        cache: 'C:\\Users\\DUMMY\\AppData\\Local\\DUMMY_MOCK\\cache',
-        crashDumps: 'C:\\Users\\DUMMY\\AppData\\Local\\DUMMY_MOCK\\User Data\\Crashpad',
-        desktop: 'C:\\Users\\MOCK_HOME_DIR\\Desktop',
-        documents: 'C:\\Users\\MOCK_HOME_DIR\\Documents',
-        downloads: 'C:\\Users\\MOCK_HOME_DIR\\Downloads',
-        exe: 'C:\\Users\\DUMMY\\Documents\\GitHub\\MOCK\\node_modules\\nw\\nwjs\\nw.exe',
+        appData: 'C:/Users/MOCK_HOME_DIR/Library/Application Support',
+        cache: 'C:/Users/DUMMY/AppData/Local/DUMMY_MOCK/cache',
+        crashDumps: 'C:/Users/DUMMY/AppData/Local/DUMMY_MOCK/User Data/Crashpad',
+        desktop: 'C:/Users/MOCK_HOME_DIR/Desktop',
+        documents: 'C:/Users/MOCK_HOME_DIR/Documents',
+        downloads: 'C:/Users/MOCK_HOME_DIR/Downloads',
+        exe: 'C:/Users/DUMMY/Documents/GitHub/MOCK/node_modules/nw/nwjs/nw.exe',
         home: '/DUMMY_XDG_CONFIG_HOME',
-        logs: 'C:\\Users\\DUMMY\\AppData\\Local\\DUMMY_MOCK\\logs',
-        module: 'C:\\Users\\DUMMY\\AppData\\Local\\DUMMY_MOCK\\User Data\\Default',
-        music: 'C:\\Users\\MOCK_HOME_DIR\\Music',
-        pepperFlashSystemPlugin: 'C:\\Users\\DUMMY\\Documents\\GitHub\\MOCK\\node_modules\\nw\\nwjs\\nw.exe\\Internet Plug-Ins\\PepperFlash',
-        pictures: 'C:\\Users\\MOCK_HOME_DIR\\Pictures',
-        temp: 'C:\\Users\\DUMMY\\AppData\\Local\\Temp',
-        userData: 'C:\\Users\\DUMMY\\AppData\\Local\\DUMMY_MOCK\\User Data\\Default',
-        videos: 'C:\\Users\\MOCK_HOME_DIR\\Videos'
+        logs: 'C:/Users/DUMMY/AppData/Local/DUMMY_MOCK/logs',
+        module: 'C:/Users/DUMMY/AppData/Local/DUMMY_MOCK/User Data/Default',
+        music: 'C:/Users/MOCK_HOME_DIR/Music',
+        pepperFlashSystemPlugin: 'C:/Users/DUMMY/Documents/GitHub/MOCK/node_modules/nw/nwjs/nw.exe/Internet Plug-Ins/PepperFlash',
+        pictures: 'C:/Users/MOCK_HOME_DIR/Pictures',
+        temp: 'C:/Users/DUMMY/AppData/Local/Temp',
+        userData: 'C:/Users/DUMMY/AppData/Local/DUMMY_MOCK/User Data/Default',
+        videos: 'C:/Users/MOCK_HOME_DIR/Videos'
       });
   });
 
@@ -152,24 +161,24 @@ describe('getPath', () => {
     global.process.platform = 'asdf';
     delete global.process.env.XDG_CONFIG_HOME;
 
-    expect(getPath('all'))
+    expect(slashifyValues(getPath('all')))
       .toEqual({
         appData: undefined,
-        cache: 'C:\\Users\\DUMMY\\AppData\\Local\\DUMMY_MOCK\\cache',
-        crashDumps: 'C:\\Users\\DUMMY\\AppData\\Local\\DUMMY_MOCK\\User Data\\Crashpad',
-        desktop: 'C:\\Users\\MOCK_HOME_DIR\\Desktop',
-        documents: 'C:\\Users\\MOCK_HOME_DIR\\Documents',
-        downloads: 'C:\\Users\\MOCK_HOME_DIR\\Downloads',
-        exe: 'C:\\Users\\DUMMY\\Documents\\GitHub\\MOCK\\node_modules\\nw\\nwjs\\nw.exe',
-        home: 'C:\\Users\\MOCK_HOME_DIR',
-        logs: 'C:\\Users\\DUMMY\\AppData\\Local\\DUMMY_MOCK\\logs',
-        module: 'C:\\Users\\DUMMY\\AppData\\Local\\DUMMY_MOCK\\User Data\\Default',
-        music: 'C:\\Users\\MOCK_HOME_DIR\\Music',
-        pepperFlashSystemPlugin: 'C:\\Users\\DUMMY\\Documents\\GitHub\\MOCK\\node_modules\\nw\\nwjs\\PepperFlash',
-        pictures: 'C:\\Users\\MOCK_HOME_DIR\\Pictures',
-        temp: 'C:\\Users\\DUMMY\\AppData\\Local\\Temp',
-        userData: 'C:\\Users\\DUMMY\\AppData\\Local\\DUMMY_MOCK\\User Data\\Default',
-        videos: 'C:\\Users\\MOCK_HOME_DIR\\Videos'
+        cache: 'C:/Users/DUMMY/AppData/Local/DUMMY_MOCK/cache',
+        crashDumps: 'C:/Users/DUMMY/AppData/Local/DUMMY_MOCK/User Data/Crashpad',
+        desktop: 'C:/Users/MOCK_HOME_DIR/Desktop',
+        documents: 'C:/Users/MOCK_HOME_DIR/Documents',
+        downloads: 'C:/Users/MOCK_HOME_DIR/Downloads',
+        exe: 'C:/Users/DUMMY/Documents/GitHub/MOCK/node_modules/nw/nwjs/nw.exe',
+        home: 'C:/Users/MOCK_HOME_DIR',
+        logs: 'C:/Users/DUMMY/AppData/Local/DUMMY_MOCK/logs',
+        module: 'C:/Users/DUMMY/AppData/Local/DUMMY_MOCK/User Data/Default',
+        music: 'C:/Users/MOCK_HOME_DIR/Music',
+        pepperFlashSystemPlugin: 'C:/Users/DUMMY/Documents/GitHub/MOCK/node_modules/nw/nwjs/PepperFlash',
+        pictures: 'C:/Users/MOCK_HOME_DIR/Pictures',
+        temp: 'C:/Users/DUMMY/AppData/Local/Temp',
+        userData: 'C:/Users/DUMMY/AppData/Local/DUMMY_MOCK/User Data/Default',
+        videos: 'C:/Users/MOCK_HOME_DIR/Videos'
       });
   });
 });

@@ -1,5 +1,5 @@
 const helpers = require('@/src/helpers.js');
-const testHelpers = require('../testHelpers.js');
+const testHelpers = require('@/tests/testHelpers.js');
 
 describe('helpers', () => {
   let consoleLog;
