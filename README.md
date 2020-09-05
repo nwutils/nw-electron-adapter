@@ -110,7 +110,7 @@ const app = require('nw-electron-adapter')(window);
 
 **Event**                                                                      | **Rating** | **Status**
 :--                                                                            | :--        | :--
-[`will-finish-launching`](src/events/willFINISHLaunching.js)                   | 🌑🌑🌑🌑 | Not Planned
+[`will-finish-launching`](src/events/willFinishLaunching.js)                   | 🌑🌑🌑🌑 | Not Planned
 [`ready`](src/events/ready.js)                                                 | 🌑🌑🌑🌑 | Not Planned
 [`window-all-closed`](src/events/windowAllClosed.js)                           | 🌑🌑🌑🌑 | Not Planned
 [`before-quit`](src/events/beforeQuit.js)                                      | 🌑🌑🌑🌑 | Not Planned
