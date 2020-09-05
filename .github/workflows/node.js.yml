@@ -38,3 +38,10 @@ jobs:
       run: npm run lint
 
     - run: npm test
+
+    # We don't want 4 comments about code coverage, just just run it once
+    - if: ${{ matrix.node-version == '8.3.0' }}
+      uses: romeovs/lcov-reporter-action@v0.2.16
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        lcov-file: ./tests/coverage/lcov.info
