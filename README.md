@@ -47,8 +47,8 @@ const app = require('nw-electron-adapter')(window);
 [`isReady`](src/api/isReady.js)                                                           | 🌑🌑🌑🌑 | Not Planned
 [`whenReady`](src/api/whenReady.js)                                                       | 🌑🌑🌑🌑 | Not Planned
 [`focus`](src/api/focus.js)                                                               | 🌑🌑🌑🌑 | Not Planned
-[`hide`](src/api/hide.js)                                                                 | 🌕🌑🌑🌑 | Planned
-[`show`](src/api/show.js)                                                                 | 🌕🌑🌑🌑 | Planned
+[`hide`](src/api/hide.js)                                                                 | 🌑🌑🌑🌑 | Not Planned
+[`show`](src/api/show.js)                                                                 | 🌑🌑🌑🌑 | Not Planned
 [`setAppLogsPath`](src/api/setAppLogsPath.js)                                             | 🌑🌑🌑🌑 | Not Planned
 [`getAppPath`](src/api/getAppPath.js)                                                     | 🌕🌕🌕🌕 | Released v1.0.0
 [`getPath`](src/api/getPath.js)                                                           | 🌕🌕🌕🌕 | Released v1.0.0
