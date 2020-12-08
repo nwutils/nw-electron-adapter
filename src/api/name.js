@@ -17,7 +17,7 @@
  * Returns the value of "productName" in the package.json, or
  * the value of "name" if there is no "productName".
  *
- * @return String  The name of the application
+ * @return {string}  The name of the application
  */
 const name = function () {
   let fs;
