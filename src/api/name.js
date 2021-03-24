@@ -22,18 +22,10 @@
 const name = function () {
   let fs;
   let appName;
-  if (window && window.nw && window.nw.App && window.nw.App.manifest && window.nw.App.manifest.name) {
-    appName = window.nw.App.manifest.name;
-  }
-  if (global && global.nw && global.nw.App && global.nw.App.manifest && global.nw.App.manifest.name) {
-    appName = global.nw.App.manifest.name;
-  }
-  if (window && window.nw && window.nw.App && window.nw.App.manifest && window.nw.App.manifest.productName) {
-    appName = window.nw.App.manifest.productName;
-  }
-  if (global && global.nw && global.nw.App && global.nw.App.manifest && global.nw.App.manifest.productName) {
-    appName = global.nw.App.manifest.productName;
-  }
+  appName = window && window.nw && window.nw.App && window.nw.App.manifest && window.nw.App.manifest.name || appName;
+  appName = global && global.nw && global.nw.App && global.nw.App.manifest && global.nw.App.manifest.name || appName;
+  appName = window && window.nw && window.nw.App && window.nw.App.manifest && window.nw.App.manifest.productName || appName;
+  appName = global && global.nw && global.nw.App && global.nw.App.manifest && global.nw.App.manifest.productName || appName;
   if (!appName) {
     if (global && global.require && global.require('fs')) {
       fs = global.require('fs');
