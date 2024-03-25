@@ -153,3 +153,8 @@ const app = require('nw-electron-adapter')(window);
 [`remote-get-builtin`](src/events/remoteGetBuiltin.js)                         | 🌑🌑🌑🌑 | Not Planned
 [`remote-get-current-window`](src/events/remoteGetCurrentWindow.js)            | 🌑🌑🌑🌑 | Not Planned
 [`remote-get-current-web-contents`](src/events/remoteGetCurrentWebContents.js) | 🌑🌑🌑🌑 | Not Planned
+
+
+## Alternatives
+
+* [Electron to NW.js](https://github.com/nwutils/electron-to-nwjs/blob/master/PROGRESS.md)
